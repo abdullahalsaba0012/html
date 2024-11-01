@@ -23,25 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         });
     });
-
-    // Add hover effect to container
-    const container = document.querySelector('.container');
-    
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        container.style.transform = `
-            translate(${x * 20}px, ${y * 20}px)
-            rotateX(${y * 10}deg)
-            rotateY(${x * 10}deg)
-        `;
-    });
-
-    // Reset transform on mobile devices
-    if (window.innerWidth <= 768) {
-        container.style.transform = 'none';
-    }
 });
 
 class MatrixRain {
